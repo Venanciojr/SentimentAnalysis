@@ -6,6 +6,7 @@ public class Runner {
 		System.out.println(ConsoleColour.WHITE);
 		System.out.println("************************************************************");
 		System.out.println("************************************************************");
+		System.out.println("************************************************************");
 		System.out.println("*     ATU - Dept. of Computer Science & Applied Physics    *");
 		System.out.println("*                                                          *");
 		System.out.println("*             Virtual Threaded Sentiment Analyser          *");
