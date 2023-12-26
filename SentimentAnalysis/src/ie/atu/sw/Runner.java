@@ -12,12 +12,11 @@ public class Runner {
 		System.out.println("*                                                          *");
 		System.out.println("************************************************************");
 		System.out.println("(1) Choose a Tweet");
-		System.out.println("(2) Specify a URL");
+		System.out.println("(2) choose a lexicon");
 		System.out.println("(3) Specify an Output File (default: ./out.txt)");
 		System.out.println("(4) Configure Lexicons");
 		System.out.println("(5) Execute, Analyse and Report");
-		System.out.println("(?) Optional Extras...");
-		System.out.println("(?) Quit");
+		System.out.println("(6) Quit");
 		
 		//Output a menu of options and solicit text from the user
 		System.out.print(ConsoleColour.BLACK_BOLD_BRIGHT);
