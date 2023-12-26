@@ -1,9 +1,15 @@
 package ie.atu.sw;
 
-public class Runner {
+import static java.lang.System.out;
 
+public class Runner {
+	private static int line = 0;
+	
 	public static void main(String[] args) throws Exception {
 		//You should put the following code into a menu or Menu class
+		new VirtualThreadFileParser().go("shakespeare.txt");
+		out.println("Lines: " + line);
+		
 		System.out.println(ConsoleColour.WHITE);
 		System.out.println("************************************************************");
 		System.out.println("*     ATU - Dept. of Computer Science & Applied Physics    *");
@@ -76,7 +82,7 @@ public class Runner {
          * be optimized by the compiler. Either way, the performance overhead
          * will be marginal.  
          */
-        StringBuilder sb = new StringBuilder();
+       StringBuilder sb = new StringBuilder();
         sb.append("[");
         for (int i = 0; i < size; i++) {
         	sb.append((i < completeLen) ? done : todo);
@@ -90,6 +96,6 @@ public class Runner {
         System.out.print("\r" + sb + "] " + complete + "%");
         
         //Once the meter reaches its max, move to a new line.
-        if (done == total) System.out.println("\n");
+      if (done == total) System.out.println("\n");
     }
 }
