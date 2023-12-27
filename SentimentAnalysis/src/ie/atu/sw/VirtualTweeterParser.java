@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.Executors;
 
-public class VirtualThreadFileParser {
+public class VirtualTweeterParser {
 	
 private static int line = 0;
 	
@@ -29,7 +29,7 @@ private static int line = 0;
 	}
 	
 	public static void main(String[] args) throws Exception {
-		new VirtualThreadFileParser().go("./shakespeare.txt");
+		new VirtualTweeterParser().go("./5toSucceed.txt");
 		out.println("Lines: " + line);
 	}
 

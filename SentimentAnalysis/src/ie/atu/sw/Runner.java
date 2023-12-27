@@ -7,7 +7,7 @@ public class Runner {
 	
 	public static void main(String[] args) throws Exception {
 		//You should put the following code into a menu or Menu class
-		new VirtualThreadFileParser().go("shakespeare.txt");
+		new VirtualTweeterParser().go("tweets/5toSucceed.txt");
 		out.println("Lines: " + line);
 		
 		System.out.println(ConsoleColour.WHITE);
