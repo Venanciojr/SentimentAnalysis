@@ -1,12 +1,12 @@
 package ie.atu.sw;
 
 public enum Tweeter {
-          TOSUCCECD5,
+	      TOSUCCEED5,
           ACEMAS21,
           ANIME81,
           DARKPIANO,
           GEN22,
-          HAPPYLOVESCHUNK,
+          HAPPYLOVESCHUCK,
           HEYKIM,
           HILZFULD,
           HOLLYALYXFINCH,

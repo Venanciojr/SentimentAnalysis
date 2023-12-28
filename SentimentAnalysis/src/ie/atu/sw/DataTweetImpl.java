@@ -1,34 +1,26 @@
 package ie.atu.sw;
 
-
+import java.io.File;
 
 public abstract class DataTweetImpl implements DataTweet {
 
-	Tweeter tweets;
+	private Tweeter tweeter;
 	
-	public void setTweets(String tweets) {
-		this.tweets = Tweeter.valueOf(tweets);
-		
-	}
 
-	@Override
-	public String getTweets() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	    public DataTweetImpl(Tweeter tweeter) {
+	        this.tweeter = tweeter;
+	    }
 
-	@Override
-	public void optionTweet() {
-		
-		
-	}
+	    public Tweeter getTweetes() {
+	        return tweeter;
+	    }
 
-	@Override
-	public boolean wrongTweet(Tweeter tweets) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-    
+	    @Override
+	    public void setTweets(File tweets) {
+	        // Implementação genérica para receber um arquivo
+	        System.out.println("Receiving file for " + tweeter + ": " + tweets.getName());
+	        // Aqui você pode adicionar lógica específica para processar o arquivo conforme necessário
+	    }
 	
 
 }
