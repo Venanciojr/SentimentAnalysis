@@ -13,11 +13,9 @@ public class Menu {
 		System.out.println("*                                                          *");
 		System.out.println("************************************************************");
 		System.out.println("(1) Choose a Tweet");
-		System.out.println("(2) choose a lexicon");
-		System.out.println("(3) Specify an Output File (default: ./out.txt)");
-		System.out.println("(4) Configure Lexicons");
-		System.out.println("(5) Execute, Analyse and Report");
-		System.out.println("(6) Quit");
+		System.out.println("(2) Execute the Tweet analysis and generate a report");
+		System.out.println("(3) Tweet analysed Output File (default: ./tweet.txt)");
+		System.out.println("(4) Quit");
 		
 	}
 	
