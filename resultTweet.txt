@@ -1,0 +1,5 @@
+the chosen tweet is: HILZFULD
+
+The tweet is positive. 😀
+Total positive words: 38
+Total negative words: 19

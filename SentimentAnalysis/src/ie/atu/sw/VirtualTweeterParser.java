@@ -9,18 +9,16 @@ import java.util.concurrent.Executors;
 
 public class VirtualTweeterParser {
 
-    private static final String LEXICON_FILE = "tweets/bingliu.txt";
-
     private ConcurrentHashMap<String, Integer> lexicon = new ConcurrentHashMap<>();
     private int positiveCount = 0;
     private int negativeCount = 0;
 
-    public VirtualTweeterParser() {
-        go();
+    public VirtualTweeterParser(String lexiconFile) {
+        go(lexiconFile);
     }
 
-    private void go() {
-        try (BufferedReader reader = new BufferedReader(new FileReader(LEXICON_FILE))) {
+    private void go(String lexiconFile) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(lexiconFile))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
@@ -34,7 +32,7 @@ public class VirtualTweeterParser {
         }
     }
 
-    public void process(String tweetFile) {
+    public String processTweetFile(String tweetFile) {
         ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor(); // Criando executor de Virtual Threads
 
         try (BufferedReader reader = new BufferedReader(new FileReader(tweetFile))) {
@@ -54,8 +52,11 @@ public class VirtualTweeterParser {
                                     negativeCount++;
                                 }
                             }
-                        }
+                            
+                        } 
+                        
                     });
+                    
                 }
             }
         } catch (IOException e) {
@@ -63,20 +64,29 @@ public class VirtualTweeterParser {
         } finally {
             executor.close(); // Encerrando o executor após o processamento
         }
-
+        
+        System.out.println();
         System.out.println("Total positive words: " + positiveCount);
         System.out.println("Total negative words: " + negativeCount);
-
+        
+        String resultMessage = "";
+        
         if (positiveCount > negativeCount) {
-            System.out.println("The tweet is positive.");
+            System.out.println("The tweet is positive. \uD83D\uDE00");
+            resultMessage = "The tweet is positive. \uD83D\uDE00";
         } else if (negativeCount > positiveCount) {
-            System.out.println("The tweet is negative.");
+            System.out.println("The tweet is negative. \u2639\uFE0F");
+            resultMessage = "The tweet is negative. \u2639\uFE0F";
         } else {
-            System.out.println("The tweet is neutral.");
+            System.out.println("The tweet is neutral. \uD83D\uDE10");
+            resultMessage = "The tweet is neutral. \uD83D\uDE10";
         }
-    }
+        
+       
+        return resultMessage += "\n" + "Total positive words: " + positiveCount + "\n" +
+                "Total negative words: " + negativeCount;
 
-    public static void main(String[] args) {
-        new VirtualTweeterParser().process("tweets/DarkPiano.txt");
     }
+    
+
 }
