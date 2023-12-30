@@ -1,5 +1,7 @@
-the chosen tweet is: HILZFULD
+The sentiment analysis is performed using the Bing Liu lexicon 
+
+ The chosen tweet is: HOLLYWOODTREY
 
 The tweet is positive. 😀
-Total positive words: 38
-Total negative words: 19
+Total positive words: 69
+Total negative words: 32

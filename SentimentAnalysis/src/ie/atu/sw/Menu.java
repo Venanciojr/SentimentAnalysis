@@ -27,7 +27,7 @@ public class Menu {
 		System.out.println("*                                                          *");
 		System.out.println("************************************************************");
 		System.out.println("(1) Choose a Tweet");
-		System.out.println("(2) Execute the Tweet Sentiment Analysis and Generate a Report");
+		System.out.println("(2) Execute a Tweet Sentiment Analysis and Generate a Report");
 		System.out.println("(3) Tweet analysed Output File (default: ./resultTweet.txt)");
 		System.out.println("(4) Quit");
 

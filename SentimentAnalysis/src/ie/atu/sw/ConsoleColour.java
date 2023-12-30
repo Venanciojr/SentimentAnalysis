@@ -1,6 +1,10 @@
 package ie.atu.sw;
 
 /**
+ * @author Venancio Moraes
+ * @version 1.0
+ * @since 1.8
+ * 
  * ANSI escape sequences are a standard for controlling cursor location, colour,
  * font styling, and other options on DOS, Mac and Linux terminals. The ANSI
  * escape codes are formatted as follows:

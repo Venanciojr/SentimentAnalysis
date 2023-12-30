@@ -5,15 +5,17 @@ import java.util.Scanner;
 /**
  * @author Venancio Moraes
  * @version 1.0
- * @since 1.8 The <b>Runner class</b> manages user inputs and controls the
- *        sentiment analysis system's execution flow.
+ * @since 1.8
+ * 
+ *        The <b>Runner class</b> manages user inputs and controls the sentiment
+ *        analysis system's execution flow.
  */
 
 public class Runner {
 
 	public static int choice; // Represents the user's choice
 	public static boolean KeepRunning; // Indicates if the program is running
-	public static Tweeter selectedTweet = null; // Holds the selected tweet
+	public static Twitter selectedTweet = null; // Holds the selected tweet
 	public static String resultTweetParse; // Holds the result of tweet parsing
 	public static String result; // Holds the final result
 
@@ -57,11 +59,12 @@ public class Runner {
 				if (selectedTweet != null) {
 					System.out.println(ConsoleColour.YELLOW_BOLD);
 					System.out.println();
+					System.out.println("\"The sentiment analysis is performed using the Bing Liu lexicon.\"");
 					System.out.println("The tweet that was chosen is: " + selectedTweet);
 					String tweetFileName = "tweets/" + selectedTweet.name().toLowerCase() + ".txt";
 					String lexiconFile = "tweets/bingliu.txt";
 
-					VirtualTweeterParser parser = new VirtualTweeterParser(lexiconFile);
+					VirtualTwitterParser parser = new VirtualTwitterParser(lexiconFile);
 					resultTweetParse = parser.processTweetFile(tweetFileName);
 
 				} else {
@@ -74,11 +77,13 @@ public class Runner {
 
 			case 3:
 				if (selectedTweet != null) {
-
-					System.out.println("the chosen tweet is: " + selectedTweet);
+					System.out.println();
+					System.out.println(ConsoleColour.GREEN_BOLD_BRIGHT);
+					System.out.println("The chosen tweet is: " + selectedTweet);
 					System.out.println("The Sentiment Analysis result is stored in a file: resultTweet.txt");
 
-					result = "the chosen tweet is: " + selectedTweet.name() + "\n\n" + resultTweetParse;
+					result = "The sentiment analysis is performed using the Bing Liu lexicon " + "\n\n"
+							+ "The chosen tweet is: " + selectedTweet.name() + "\n\n" + resultTweetParse;
 
 					TweetResultOutput.saveResultToFile(result);
 				} else {
@@ -110,7 +115,7 @@ public class Runner {
 	 * @return The selected tweet
 	 */
 
-	public static Tweeter getInputForTweet() {
+	public static Twitter getInputForTweet() {
 
 		@SuppressWarnings("resource") // Suppressing warnings related to resource management for the Scanner
 		Scanner scanner = new Scanner(System.in);// Initializing a Scanner to read user inputs from the console
@@ -119,7 +124,7 @@ public class Runner {
 		System.out.println(ConsoleColour.BLUE_BOLD_BRIGHT);
 		System.out.println("Here is a list of tweets:");
 
-		for (Tweeter tweet : Tweeter.values()) { // Iterating through the available tweets and displaying them with
+		for (Twitter tweet : Twitter.values()) { // Iterating through the available tweets and displaying them with
 													// their respective indices
 
 			System.out.println("(" + (tweet.ordinal() + 1) + ") " + tweet.name());
@@ -133,8 +138,8 @@ public class Runner {
 
 		// Validating the user input against the available tweet options and returning
 		// the selected tweet
-		if (userChoice > 0 && userChoice <= Tweeter.values().length) {
-			return Tweeter.values()[userChoice - 1];
+		if (userChoice > 0 && userChoice <= Twitter.values().length) {
+			return Twitter.values()[userChoice - 1];
 		} else {
 
 			return null;
@@ -148,7 +153,7 @@ public class Runner {
 
 	/**
 	 * <b> Big-O notation</b> for The method getInputForTweet() is time complexity
-	 * is O(n) iterates through the available Tweeter values to display them for
+	 * is O(n) iterates through the available Twitter values to display them for
 	 * user selection.
 	 */
 }
