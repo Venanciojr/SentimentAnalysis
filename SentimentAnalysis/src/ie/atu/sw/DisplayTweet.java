@@ -5,14 +5,15 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
+ * The {@code DisplayTweet} class <b>extends</b> the {@code DataTweetImpl}
+ * abstract class and provides functionality to display the content of a tweet
+ * file associated with a specific Twitter handle.
+ * 
  * @author Venancio Moraes
  * @version 1.0
  * @since 1.8
  * 
- *        The {@code DisplayTweet} class <b>extends</b> the
- *        {@code DataTweetImpl} abstract class and provides functionality to
- *        display the content of a tweet file associated with a specific Twitter
- *        handle.
+ * 
  */
 
 public class DisplayTweet extends DataTweetImpl {

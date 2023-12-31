@@ -8,12 +8,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
+ * The {@code VirtualTwitterParser} class processes tweet files using a
+ * sentiment lexicon to determine their overall sentiment.
+ * 
  * @author Venancio Moraes
  * @version 1.0
  * @since 1.8
  * 
- * The {@code VirtualTwitterParser} class processes tweet files using a
- * sentiment lexicon to determine their overall sentiment.
+ * 
  */
 public class VirtualTwitterParser {
 

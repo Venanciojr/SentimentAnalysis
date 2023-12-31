@@ -3,12 +3,14 @@ package ie.atu.sw;
 import java.util.Scanner;
 
 /**
+ * The <b>Runner class</b> manages user inputs and controls the sentiment
+ * analysis system's execution flow.
+ * 
  * @author Venancio Moraes
  * @version 1.0
  * @since 1.8
  * 
- *        The <b>Runner class</b> manages user inputs and controls the sentiment
- *        analysis system's execution flow.
+ * 
  */
 
 public class Runner {

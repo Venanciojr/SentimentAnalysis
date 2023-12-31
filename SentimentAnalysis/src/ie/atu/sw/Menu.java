@@ -1,14 +1,15 @@
 package ie.atu.sw;
 
 /**
+ * The <b>Menu class</b> provides methods to display a menu and show a
+ * progress meter. It uses ANSI escape sequences to control console text color
+ * and provides a method to visualize a progress meter with a given size.
+ * 
  * @author Venancio Moraes
  * @version 1.0
  * @since 1.8
  * 
- *        The Menu class provides methods to <b> display a menu </b> and show a
- *        progress meter. It uses ANSI escape sequences to control console text
- *        color and provides a method to visualize a progress meter with a given
- *        size.
+ * 
  */
 
 public class Menu {

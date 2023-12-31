@@ -3,14 +3,15 @@ package ie.atu.sw;
 import java.io.File;
 
 /**
+ * The {@code DataTweetImpl} <b> abstract class</b> provides an abstract
+ * implementation of the {@code DataTweet} interface. It contains functionality
+ * to set tweet data from a file and manages a specific Twitter handle.
+ * 
  * @author Venancio Moraes
  * @version 1.0
  * @since 1.8
  * 
- *        The {@code DataTweetImpl} <b> abstract class</b> provides an abstract
- *        implementation of the {@code DataTweet} interface. It contains
- *        functionality to set tweet data from a file and manages a specific
- *        Twitter handle.
+ * 
  */
 
 public abstract class DataTweetImpl implements DataTweet {
