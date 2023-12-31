@@ -1,20 +1,23 @@
 package ie.atu.sw;
 
-/**
+
+ /**
+ * Enum defining console colors for text and background.
+ * Each enum constant represents a color with its associated ANSI code.
+ * Provides a way to format text output in the console using ANSI escape sequences.
+ * 
+ * ANSI escape sequences are a standard for controlling cursor location, colour,
+ * font styling, and other options on DOS, Mac, and Linux terminals.
+ * 
+ * See https://en.wikipedia.org/wiki/ANSI_escape_code for more information.
+ * 
  * @author Venancio Moraes
  * @version 1.0
  * @since 1.8
- * 
- * ANSI escape sequences are a standard for controlling cursor location, colour,
- * font styling, and other options on DOS, Mac and Linux terminals. The ANSI
- * escape codes are formatted as follows:
- * 
- * [PREFIX];[COLOR];[TEXT DECORATION]
- * 
- * See https://en.wikipedia.org/wiki/ANSI_escape_code for a decent description.
  */
+ 
 public enum ConsoleColour {
-	// Reset
+	// ... (existing enum constants)
 	RESET("Reset", "0"),
 
 	// Regular Colours
@@ -22,18 +25,18 @@ public enum ConsoleColour {
 	YELLOW("Yellow [Regular]", "0;33"), BLUE("Blue [Regular]", "0;34"), PURPLE("Purple [Regular]", "0;35"),
 	CYAN("Cyan [Regular]", "0;36"), WHITE("White [Regular]", "0;37"),
 
-	// Bold
+	// ... (other regular colors)
 	BLACK_BOLD("Black [Bold]", "1;30"), RED_BOLD("Red [Bold]", "1;31"), GREEN_BOLD("Green [Bold]", "1;32"),
 	YELLOW_BOLD("Yellow [Bold]", "1;33"), BLUE_BOLD("Blue [Bold]", "1;34"), PURPLE_BOLD("Purple [Bold]", "1;35"),
 	CYAN_BOLD("Cyan [Bold]", "1;36"), WHITE_BOLD("White [Bold]", "1;37"),
 
-	// Underline
+	 // High intensity backgrounds
 	BLACK_UNDERLINED("Black [Underline]", "4;30"), RED_UNDERLINED("Red [Underline]", "4;31"),
 	GREEN_UNDERLINED("Green [Underline]", "4;32"), YELLOW_UNDERLINED("Yellow [Underline]", "4;33"),
 	BLUE_UNDERLINED("Blue [Underline]", "4;34"), PURPLE_UNDERLINED("Purple [Underline]", "4;35"),
 	CYAN_UNDERLINED("Cyan [Underline]", "4;36"), WHITE_UNDERLINED("White [Underline]", "4;37"),
 
-	// Background
+	// ... (other high intensity background colors)
 	BLACK_BACKGROUND("Black [Background]", "40"), RED_BACKGROUND("Red [Background]", "41"),
 	GREEN_BACKGROUND("Green [Background]", "42"), YELLOW_BACKGROUND("Yellow [Background]", "43"),
 	BLUE_BACKGROUND("Blue [Background]", "44"), PURPLE_BACKGROUND("Purple [Background]", "45"),
